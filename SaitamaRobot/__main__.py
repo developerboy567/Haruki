@@ -53,7 +53,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hi {}, my name is {}! 
-I am an Anime themed group management bot.
+I am an Anime themed group management bot.Created By @Developer_boy_sd_owner @Itz_Mr_Hillarious 
 Made With ❤ I specialize in managing your group with my advance features.
 
 You can find my list of available commands with /help.
@@ -61,8 +61,7 @@ You can find my list of available commands with /help.
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a Teacher who will made your group secure and help admins manage their groups with Anime Sensei! Have a look at the following for an idea of some of the things I can help you with.
-
+I'm a Teacher who will made your group secure and help admins manage their groups with Mr Hillarious! Have a look at the following for an idea of some of the things I can help you With Developer Boy!
 *Main* commands available:
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
@@ -78,10 +77,10 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/923977a7e7a903dd82a31.jpg"
+THUNDER_IMG = "https://telegra.ph/file/66455ecc1018b1ac294ef.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
+Thunder is hosted on one of Developer Boy and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Paul
 There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
 
@@ -192,7 +191,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-                SAITAMA_IMG,
+                THUNDER_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name)),
@@ -201,7 +200,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="🧲Add Koro Sensei to your group!",
+                            text="🧲Add Thunder King to your group!",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -211,17 +210,17 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🔔Updates Channel",
-                             url="https://t.me/KoroSenseiUpdate")
+                             url="https://t.me/thunderkingsupport")
                      ],
                      [
                          InlineKeyboardButton(
                              text="📖 Getting Started Guide",
-                             url="https://t.me/koroSenseiUpdate/5")
+                             url="https://t.me/thunderkingsupport")
                      ],
                      [
                          InlineKeyboardButton(
                              text="💾 Source Code.",
-                             url="https://github.com/Koro-Sensei-0/Haruki")
+                             url="https://github.com/developerboy567/ThunderKing")
                      ]]))
     else:
         update.effective_message.reply_text(
@@ -498,7 +497,7 @@ def donate(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True)
 
-        if OWNER_ID != 254318997 and DONATION_LINK:
+        if OWNER_ID != 710828300 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
